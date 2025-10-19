@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Travela - Tour Booking Website with Personalized Recommendations
 
 ## 🌍 Overview
@@ -148,3 +149,6 @@ If you have any questions or want to contribute, feel free to reach out:
 
 Thank you for using Travela! We hope you enjoy your travel journey with us. ✈️ 🌟
 
+=======
+# BookTour
+>>>>>>> 268c2bcebd4d57625a5ad880f7f4af48fc0bb597
