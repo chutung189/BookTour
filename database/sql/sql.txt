@@ -1,1 +1,1 @@
-mysql -u root -p booktour < database/sql/nptour.sql
+mysql -u root -p nptour < database/sql/nptour.sql
