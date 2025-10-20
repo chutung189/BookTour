@@ -20,7 +20,7 @@ return new class extends Migration
             $table->enum('paymentMethod', ['Credit Card', 'PayPal', 'Cash', 'Bank Transfer', 'office-payment'])->nullable();
             $table->double('amount')->nullable();
             $table->date('paymentDate')->nullable();
-            $table->char('paymentStatus', ['n', 'y'])->nullable()->default('n');
+            $table->enum('paymentStatus', ['n', 'y'])->nullable()->default('n');
         });
     }
 
