@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer('checkoutId', true);
             $table->integer('userId')->nullable();
             $table->integer('bookingId')->nullable()->index('fk_checkout_booking');
-            $table->enum('paymentMethod', ['Credit Card', 'PayPal', 'Cash', 'Bank Transfer', 'office - payment'])->nullable();
+            $table->enum('paymentMethod', ['Credit Card', 'PayPal', 'Cash', 'Bank Transfer', 'office-payment'])->nullable();
             $table->double('amount')->nullable();
             $table->date('paymentDate')->nullable();
             $table->char('paymentStatus', 1)->nullable()->default('n');
