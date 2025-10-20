@@ -14,7 +14,7 @@ class MyTourController extends Controller
 
     public function __construct()
     {
-        parent::__construct(); // Nếu parent::__construct không tồn tại thì bỏ dòng này
+        parent::__construct();
         $this->tours = new Tours();
     }
 
@@ -49,7 +49,7 @@ class MyTourController extends Controller
         } else {
             $toursPopular = $this->tours->toursPopular(6);
         }
-
+        // dd($myTours);
         return view('clients.my-tours', compact('title', 'myTours', 'toursPopular'));
     }
 }

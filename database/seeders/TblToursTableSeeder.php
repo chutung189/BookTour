@@ -14,12 +14,12 @@ class TblToursTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
         \DB::table('tbl_tours')->delete();
-        
+
         \DB::table('tbl_tours')->insert(array (
-            0 => 
+            0 =>
             array (
                 'tourId' => 5,
                 'title' => 'Mũi Cà Mau',
@@ -41,7 +41,7 @@ Trong chuyến đi n&agrave;y, du kh&aacute;ch sẽ được chi&ecirc;m ngưỡ
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            1 => 
+            1 =>
             array (
                 'tourId' => 6,
                 'title' => 'Mũi Cà Mau',
@@ -63,7 +63,7 @@ Trong chuyến đi n&agrave;y, du kh&aacute;ch sẽ được chi&ecirc;m ngưỡ
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            2 => 
+            2 =>
             array (
                 'tourId' => 7,
                 'title' => 'Mũi Cà Mau',
@@ -85,7 +85,7 @@ Trong chuyến đi n&agrave;y, du kh&aacute;ch sẽ được chi&ecirc;m ngưỡ
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            3 => 
+            3 =>
             array (
                 'tourId' => 8,
                 'title' => 'Mũi Cà Mau',
@@ -107,7 +107,7 @@ Trong chuyến đi n&agrave;y, du kh&aacute;ch sẽ được chi&ecirc;m ngưỡ
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            4 => 
+            4 =>
             array (
                 'tourId' => 9,
                 'title' => 'Mũi Cà Mau',
@@ -129,7 +129,7 @@ Trong chuyến đi n&agrave;y, du kh&aacute;ch sẽ được chi&ecirc;m ngưỡ
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            5 => 
+            5 =>
             array (
                 'tourId' => 10,
                 'title' => 'Mũi Cà Mau',
@@ -151,7 +151,7 @@ Trong chuyến đi n&agrave;y, du kh&aacute;ch sẽ được chi&ecirc;m ngưỡ
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            6 => 
+            6 =>
             array (
                 'tourId' => 11,
                 'title' => 'Hạ Long Bay',
@@ -174,7 +174,7 @@ Trong chuyến đi n&agrave;y, du kh&aacute;ch sẽ được chi&ecirc;m ngưỡ
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            7 => 
+            7 =>
             array (
                 'tourId' => 12,
                 'title' => 'Đà Nẵng',
@@ -195,7 +195,7 @@ Trong chuyến đi n&agrave;y, du kh&aacute;ch sẽ được chi&ecirc;m ngưỡ
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            8 => 
+            8 =>
             array (
                 'tourId' => 13,
                 'title' => 'Du Lịch Miền Tây',
@@ -219,7 +219,7 @@ C&ugrave;ng tận hưởng kh&ocirc;ng kh&iacute; y&ecirc;n b&igrave;nh, gần g
                 'updated_at' => NULL,
             ),
         ));
-        
-        
+
+
     }
 }
