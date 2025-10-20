@@ -66,11 +66,6 @@ Route::post('/booking/{id?}', [BookingController::class, 'index'])->name('bookin
 Route::post('/create-booking', [BookingController::class, 'createBooking'])->name('create-booking');
 Route::get('/booking', [BookingController::class, 'handlePaymentMomoCallback'])->name('handlePaymentMomoCallback');
 
-//Payment with paypal
-Route::get('create-transaction', [PayPalController::class, 'createTransaction'])->name('createTransaction');
-Route::get('process-transaction', [PayPalController::class, 'processTransaction'])->name('processTransaction');
-Route::get('success-transaction', [PayPalController::class, 'successTransaction'])->name('successTransaction');
-Route::get('cancel-transaction', [PayPalController::class, 'cancelTransaction'])->name('cancelTransaction');
 
 //Payment with Momo
 Route::post('/create-momo-payment', [BookingController::class, 'createMomoPayment'])->name('createMomoPayment');
