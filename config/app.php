@@ -187,6 +187,7 @@ return [
         /*
          * Package Service Providers...
          */
+        // KitLoong\MigrationsGenerator\MigrationsGeneratorServiceProvider::class,
 
         /*
          * Application Service Providers...
