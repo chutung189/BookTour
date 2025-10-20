@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # NPTour - Tour Booking Website with Personalized Recommendations
 
 ## 🌍 Overview
@@ -143,4 +142,3 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 =======
 # BookTour
->>>>>>> 268c2bcebd4d57625a5ad880f7f4af48fc0bb597
