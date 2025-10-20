@@ -57,11 +57,11 @@
                                             <div class="col-sm-4 invoice-col">
                                                 Đến
                                                 <address>
-                                                    <strong>Công ty Travela</strong>
-                                                    <br>470 Trần Đại Nghĩa
-                                                    <br>Ngũ Hành Sơn, Đà Nẵng
-                                                    <br>Phone: 1 (804) 123-9876
-                                                    <br>Email: minhdien.dev@gmail.com
+                                                    <strong>Công ty NPTour</strong>
+                                                    <br>Thanh Xuân Bắc
+                                                    <br>Thanh Xuân, Hà Nội
+                                                    <br>Phone: 0912345JQKA2
+                                                    <br>Email: chutung@gmail.com
                                                 </address>
                                             </div>
                                             <!-- /.col -->

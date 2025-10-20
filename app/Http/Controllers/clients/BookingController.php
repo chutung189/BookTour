@@ -104,40 +104,40 @@ class BookingController extends Controller
     public function createMomoPayment(Request $request)
     {
         session()->put('tourId', $request->tourId);
-        
+
         try {
             // $amount = $request->amount;
             $amount = 10000;
-    
+
             // Các thông tin cần thiết của MoMo
             $endpoint = "https://test-payment.momo.vn/v2/gateway/api/create";
             $partnerCode = "MOMOBKUN20180529"; // mã partner của bạn
             $accessKey = "klm05TvNBzhg7h7j"; // access key của bạn
             $secretKey = "at67qH6mk8w5Y1nAyMoYKMWACiEi2bsa"; // secret key của bạn
-    
+
             $orderInfo = "Thanh toán đơn hàng";
             $requestId = time();
             $orderId = time();
             $extraData = "";
-            $redirectUrl = "http://travela:8000/booking"; // URL chuyển hướng
-            $ipnUrl = "http://travela:8000/booking"; // URL IPN
+            $redirectUrl = "http://127.0.0.1:8000/booking"; // URL chuyển hướng
+            $ipnUrl = "http://127.0.0.1:8000/booking"; // URL IPN
             $requestType = 'payWithATM'; // Kiểu yêu cầu
-    
+
             // Tạo rawHash và chữ ký theo cách thủ công
-            $rawHash = "accessKey=" . $accessKey . 
-                       "&amount=" . $amount . 
-                       "&extraData=" . $extraData . 
-                       "&ipnUrl=" . $ipnUrl . 
-                       "&orderId=" . $orderId . 
-                       "&orderInfo=" . $orderInfo . 
-                       "&partnerCode=" . $partnerCode . 
-                       "&redirectUrl=" . $redirectUrl . 
-                       "&requestId=" . $requestId . 
+            $rawHash = "accessKey=" . $accessKey .
+                       "&amount=" . $amount .
+                       "&extraData=" . $extraData .
+                       "&ipnUrl=" . $ipnUrl .
+                       "&orderId=" . $orderId .
+                       "&orderInfo=" . $orderInfo .
+                       "&partnerCode=" . $partnerCode .
+                       "&redirectUrl=" . $redirectUrl .
+                       "&requestId=" . $requestId .
                        "&requestType=" . $requestType;
-    
+
             // Tạo chữ ký
             $signature = hash_hmac("sha256", $rawHash, $secretKey);
-    
+
             // Dữ liệu gửi đến MoMo
             $data = [
                 'partnerCode' => $partnerCode,
@@ -154,10 +154,10 @@ class BookingController extends Controller
                 'requestType' => $requestType,
                 'signature' => $signature
             ];
-    
+
             // Gửi yêu cầu POST đến MoMo để tạo yêu cầu thanh toán
             $response = Http::post($endpoint, $data);
-    
+
             if ($response->successful()) {
                 $body = $response->json();
                 if (isset($body['payUrl'])) {
@@ -175,14 +175,14 @@ class BookingController extends Controller
             return response()->json(['error' => 'Đã xảy ra lỗi', 'message' => $e->getMessage(), 'trace' => $e->getTraceAsString()], 500);
         }
     }
-    
+
 
     public function handlePaymentMomoCallback(Request $request)
     {
         $resultCode = $request->input('resultCode');
         $transIdMomo = $request->query('transId');
         // dd(session()->get('tourId'));
-        $tourId = session()->get('tourId'); 
+        $tourId = session()->get('tourId');
         $tour = $this->tour->getTourDetail($tourId);
         session()->forget('tourId');
         // Handle the payment response

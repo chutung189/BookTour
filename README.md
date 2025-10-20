@@ -1,8 +1,8 @@
 <<<<<<< HEAD
-# Travela - Tour Booking Website with Personalized Recommendations
+# NPTour - Tour Booking Website with Personalized Recommendations
 
 ## 🌍 Overview
-**Travela** is a user-friendly tour booking platform designed to make travel planning effortless. With an integrated personalized recommender system, it helps users find the perfect tours based on their preferences and activities. The platform also includes robust administrative tools for managing tours, users, and analytics.
+**NPTour** is a user-friendly tour booking platform designed to make travel planning effortless. With an integrated personalized recommender system, it helps users find the perfect tours based on their preferences and activities. The platform also includes robust administrative tools for managing tours, users, and analytics.
 
 ---
 
@@ -67,8 +67,8 @@
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/dienakdz/travela.git
-   cd travela
+   git clone https://github.com/chutung189/BookTour.git
+   cd BookTour
    ```
 
 2. **Install Backend Dependencies**:
@@ -104,7 +104,7 @@
 ## 🗂️ Project Structure
 
 ```
-travela/
+booktour/
 ├── app/               # Backend logic (Controllers, Models)
 ├── database/          # Migrations and seeds
 ├── public/            # Public assets (CSS, JS, Images)
