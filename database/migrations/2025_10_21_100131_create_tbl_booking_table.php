@@ -26,7 +26,7 @@ return new class extends Migration
             $table->date('bookingDate')->nullable();
             $table->double('totalPrice')->nullable();
             $table->text('specialRequest')->nullable();
-            $table->enum('bookingStatus', ['b', 'c', 'y','f'])->nullable()->default('b');
+            $table->enum('bookingStatus', ['b', 'c', 'y', 'f'])->nullable()->default('b');
             $table->timestamps();
             $table->integer('checkoutId')->nullable();
         });

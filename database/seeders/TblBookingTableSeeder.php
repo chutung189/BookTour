@@ -209,6 +209,25 @@ class TblBookingTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'checkoutId' => NULL,
             ),
+            10 => 
+            array (
+                'bookingId' => 11,
+                'userId' => 5,
+                'address' => 'Thanh Tri',
+                'fullName' => 'Pham Viet Phuong',
+                'email' => '22010465@st.phenikaa-uni.edu.vn',
+                'phoneNumber' => '0912345678',
+                'tourId' => 12,
+                'numAdults' => 1,
+                'numChildren' => 0,
+                'bookingDate' => NULL,
+                'totalPrice' => 8000000.0,
+                'specialRequest' => NULL,
+                'bookingStatus' => 'b',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'checkoutId' => NULL,
+            ),
         ));
         
         

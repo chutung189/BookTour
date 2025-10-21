@@ -21,6 +21,7 @@ return new class extends Migration
             $table->double('amount')->nullable();
             $table->date('paymentDate')->nullable();
             $table->enum('paymentStatus', ['n', 'y'])->nullable()->default('n');
+            $table->string('transactionId', 100)->nullable();
         });
     }
 

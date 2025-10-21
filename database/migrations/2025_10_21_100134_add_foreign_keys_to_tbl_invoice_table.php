@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('tbl_invoice', function (Blueprint $table) {
-            $table->foreign(['bookingId'], 'fk_invoice_booking')->references(['bookingId'])->on('tbl_booking')->onDelete('CASCADE');
             $table->foreign(['bookingId'], 'tbl_invoice_ibfk_1')->references(['bookingId'])->on('tbl_booking');
+            $table->foreign(['bookingId'], 'fk_invoice_booking')->references(['bookingId'])->on('tbl_booking')->onDelete('CASCADE');
         });
     }
 
@@ -27,8 +27,8 @@ return new class extends Migration
     public function down()
     {
         Schema::table('tbl_invoice', function (Blueprint $table) {
-            $table->dropForeign('fk_invoice_booking');
             $table->dropForeign('tbl_invoice_ibfk_1');
+            $table->dropForeign('fk_invoice_booking');
         });
     }
 };

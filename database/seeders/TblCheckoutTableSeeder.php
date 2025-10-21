@@ -96,6 +96,17 @@ class TblCheckoutTableSeeder extends Seeder
                 'paymentStatus' => 'n',
                 'transactionId' => NULL,
             ),
+            7 => 
+            array (
+                'checkoutId' => 8,
+                'userId' => NULL,
+                'bookingId' => 11,
+                'paymentMethod' => 'office-payment',
+                'amount' => 8000000.0,
+                'paymentDate' => NULL,
+                'paymentStatus' => 'n',
+                'transactionId' => NULL,
+            ),
         ));
         
         
